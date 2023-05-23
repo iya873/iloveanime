@@ -1,6 +1,8 @@
+import './Navbar.css'
 import { Link } from "react-router-dom"
 
 const Navbar = () => {
+	
   return (
 		<nav >
 			<ul className='nav justify-content-center'>
@@ -15,7 +17,7 @@ const Navbar = () => {
 					</Link>
 				</li>
 				<li className='nav-item'>
-					<Link className='nav-link disabled' to='/dashboard'>
+					<Link className='nav-link disabled' to='/details/:id'>
 						Dashboard
 					</Link>
 				</li>

@@ -1,0 +1,9 @@
+.container-fluid {
+    display: grid;
+}
+.spinner-border {
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    bottom: 100px;
+}
