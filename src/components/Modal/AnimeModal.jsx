@@ -1,14 +1,21 @@
 import { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
-import { Link, useParams } from 'react-router-dom';
 
 const AnimeModal = ({ anime }) => {
-    let { id } = useParams();
+	
+	let navigate = useNavigate();
+
      let [show, setShow] = useState(false);
 
-			const handleClose = () => setShow(false);
-			const handleShow = () => setShow(true);
+	const handleClose = () => setShow(false);
+	const handleShow = () => setShow(true);
+	
+	const getDetails = async () => {
+		navigate(`/details/${anime.mal_id}`)
+	}
+
     return (
 			<>
 				<Button variant='primary' onClick={handleShow}>
@@ -26,9 +33,10 @@ const AnimeModal = ({ anime }) => {
 						<Button variant='secondary' onClick={handleClose}>
 							Close
 						</Button>
-						<Button variant='primary' onClick={handleClose}>
-							<Link to={`/details/${id}`}>Go to Page</Link>
-						</Button>
+					<Link to={`/details/${anime.mal_id}`}>
+						<Button onClick={getDetails}>Go to Page</Button>
+					</Link>
+						
 					</Modal.Footer>
 				</Modal>
 			</>

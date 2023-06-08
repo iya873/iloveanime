@@ -1,4 +1,4 @@
-import { Navigate, Route, Routes, useParams } from 'react-router-dom';
+import { Navigate, Route, Routes } from 'react-router-dom';
 import './App.css';
 import Header from './components/Header/Header';
 import Navbar from './components/Navbar/Navbar';
@@ -8,6 +8,7 @@ import Home from './pages/Home/Home';
 import Search from './pages/Search/Search';
 
 function App() {
+
  
 
   return (

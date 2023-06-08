@@ -1,0 +1,1 @@
+const BaseUrl = 'https://animes5.p.rapidapi.com/'
